@@ -23,8 +23,6 @@ Useful for dynamic parsing of on-chain data.
 
 ### 3. Is there an equivalent to `openzeppelin-contracts` on Solana?
 
-Solana does not yet have a widely-used, full-featured contract library like OpenZeppelin. Most utilities are either built in-house or copied across projects. There's potential for future ecosystem standardization.
-
 ---
 
 ### 4. Solana localnet conflicts with Anchor
@@ -52,13 +50,11 @@ You can clone and build locally from:
 
 ### 7. Can Solana contracts be verified and viewed in the browser?
 
-Unlike EVM, Solana does not yet support public on-chain contract source viewing in explorers. You must manually locate the code or IDL and use tools like Codama for reverse analysis.
+Unlike EVM, Solana does not yet support public on-chain contract source viewing in explorers. You must manually locate the code or IDL and use tools like Codama for reverse analysis. It is inconvenient. 
 
 ---
 
-### 8. Can a closed program ID be reused?
-
-Yes, if a program is closed (account closed and lamports reclaimed), the same program ID can be reused on redeployment.
+### 8. Can a closed program ID be reused? I don't want to change program ID every time.
 
 ---
 
@@ -86,3 +82,4 @@ This error appears when using `BaseCollectionV1` with all-zero discriminators. P
 ---
 
 ### 12. Pinoc
+Pinocchio does not have `declare_program!` macro, and it seems that it is not possible to call instructions or cpi through idl. I hope it will be supported in the future.
